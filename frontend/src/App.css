@@ -1,0 +1,84 @@
+#root {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* App container (first child rendered by React) */
+#root > div {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.06) inset;
+  backdrop-filter: blur(8px);
+}
+
+/* Title */
+#root > div h1 {
+  margin: 0 0 1rem 0;
+}
+
+/* Textarea spacing (visual rhythm) */
+#root > div textarea {
+  margin-top: 0.5rem;
+  max-width: 720px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button row */
+#root > div > div:nth-of-type(1) {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+/* Subtle second-button treatment */
+#root > div > div:nth-of-type(1) button:last-child {
+  background: linear-gradient(180deg, var(--bg-soft) 0%, var(--surface) 100%);
+  color: var(--text);
+}
+
+/* Results section */
+#root > div > div:nth-of-type(2) {
+  margin-top: 1.25rem;
+}
+
+#root > div h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Result box following the heading */
+#root > div h3 + div {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-soft) 0%, var(--surface) 100%);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  min-height: 64px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset,
+              0 6px 18px rgba(0,0,0,0.22);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive tuning */
+@media (max-width: 640px) {
+  #root {
+    padding: 1rem;
+  }
+  #root > div {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+}

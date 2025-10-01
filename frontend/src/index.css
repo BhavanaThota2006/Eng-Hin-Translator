@@ -1,0 +1,132 @@
+:root {
+  /* Typography */
+  font-family: Inter, ui-sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: auto;
+
+  /* Palette */
+  --bg: #0b1020;
+  --bg-soft: #0f1730;
+  --surface: #121b3a;
+  --surface-2: #17224a;
+  --text: #e6ecff;
+  --text-dim: #a9b4d0;
+  --primary: #7aa2ff;
+  --primary-strong: #4d7cff;
+  --accent: #00e0b8;
+  --border: rgba(122, 162, 255, 0.25);
+  --ring: rgba(0, 224, 184, 0.35);
+
+  color-scheme: light dark;
+  color: var(--text);
+  background-color: var(--bg);
+
+  /* Rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-strong);
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(122,162,255,0.12), transparent 60%),
+              radial-gradient(1000px 500px at 90% 30%, rgba(0,224,184,0.10), transparent 55%),
+              var(--bg);
+  text-align: center;
+}
+.root-style {
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0.7em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-family: inherit;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset,
+              0 8px 20px rgba(0,0,0,0.35),
+              0 0 0 0 rgba(0,224,184,0.0);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+button:hover {
+  border-color: var(--primary);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset,
+              0 10px 26px rgba(0,0,0,0.45),
+              0 0 0 6px rgba(122,162,255,0.08);
+}
+button:active {
+  transform: translateY(1px);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f9ff;
+    --bg-soft: #f1f4ff;
+    --surface: #ffffff;
+    --surface-2: #f7f9ff;
+    --text: #0f172a;
+    --text-dim: #475569;
+    --primary: #3558ff;
+    --primary-strong: #1e3aff;
+    --accent: #00c7a1;
+    --border: rgba(53, 88, 255, 0.25);
+    --ring: rgba(53, 88, 255, 0.25);
+  }
+}
+
+/* Form controls (to style inline in App.jsx) */
+textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+  color: var(--text);
+  padding: 0.9em 1em;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset,
+              0 6px 18px rgba(0,0,0,0.25);
+}
+textarea::placeholder {
+  color: var(--text-dim);
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--ring), 0 6px 18px rgba(0,0,0,0.25);
+}

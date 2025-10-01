@@ -1,0 +1,19 @@
+How to start
+
+---Frontend---
+open cmd terminal 
+type "cd frontend"
+type "npm run dev"
+Click on http://localhost:5173/ -> It open frontend part
+
+---Backend---
+open another cmd terminal
+type "cd backend"
+type "python app.py"
+On the same frontend browser -> Take new tab -> type "http://localhost:8000/health"
+It it shows "{"ok":true}" -> Then the backend is started
+
+Now you can ask anything you what to translate :)
+
+
+
